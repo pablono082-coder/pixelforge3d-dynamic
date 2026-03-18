@@ -2,7 +2,7 @@ name: Keep site awake
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Ogni 15 minuti
+    - cron: '* * * * *'  # Ogni 15 minuti
 
 jobs:
   keep-alive:
