@@ -1,0 +1,12 @@
+name: Keep site awake
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Ogni 15 minuti
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call web app
+        run: curl -f https://pixelforge3ddynamick-hgdjfngzfadaftey.germanywestcentral-01.azurewebsites.net/ || exit 0
